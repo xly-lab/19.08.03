@@ -11,23 +11,22 @@
 	
 ### 第一个页面 入口界面
 > ![index.wxml](/miniprogram/images/movie.jpg)
-> 	从豆瓣api获取数据 ` http://api.douban.com/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a&start=${event.start}&count=${event.count}` 现在的豆瓣api访问不了  网上搜的链接要加上apikey参数
+> 	
+从豆瓣api获取数据 ` http://api.douban.com/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a&start=${event.start}&count=${event.count}` 现在的豆瓣api访问不了  网上搜的链接要加上apikey参数
 
 ### 第二个页面 新闻界面
 >![index.wxml](/miniprogram/images/movie-detail.jpg)
 >  
->	同样涉及到api的调用  使用的`http://api.douban.com/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a&start=${event.start}&count=${event.count}`同样要加上apikey参数
+>	
+同样涉及到api的调用  使用的`http://api.douban.com/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a&start=${event.start}&count=${event.count}`同样要加上apikey参数
 
 
 ### 第三个页面 
 > ![index.wxml](/miniprogram/images/movie-comment.jpg)
 >  此页面运用到了wx的云函数，云数据库，文件上传及相关云开发
-
->	>  数据库的init
-	
-		const db = wx.cloud.database()
-	
->	>		文件上传
+>	>  数据库的init	
+		const db = wx.cloud.database()	
+>	>  文件上传
 		wx.chooseImage({
 			success (res) {
 			const tempFilePaths = res.tempFilePaths
@@ -46,8 +45,7 @@
 		  }
 		})
 
->	>		云存储
-
+>	>  云存储
 >	> iviewUI的引入
 
 	` npm install iview --save`
