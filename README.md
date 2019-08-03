@@ -24,10 +24,13 @@
 ### 第三个页面 
 > ![index.wxml](/miniprogram/images/movie-comment.jpg)
 >  此页面运用到了wx的云函数，云数据库，文件上传及相关云开发
->	>  数据库的init	
+>	>  数据库的init
+
 		const db = wx.cloud.database()	
+		
 >	>  文件上传
-		wx.chooseImage({
+
+	wx.chooseImage({
 			success (res) {
 			const tempFilePaths = res.tempFilePaths
 				wx.uploadFile({
@@ -46,7 +49,8 @@
 		})
 
 >	>  云存储
->	> iviewUI的引入
+
+>	>  iviewUI的引入
 
 	` npm install iview --save`
     
