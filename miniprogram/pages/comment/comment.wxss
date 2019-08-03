@@ -1,0 +1,29 @@
+/* pages/comment/comment.wxss */
+.comment{
+  width:97%;
+  margin: 10rpx;
+}
+.comment .comment-coms{
+  width: 97%;
+  height: 250rpx;
+  margin: 10rpx;
+  box-shadow: 0 0 5rpx #ccc;
+
+}
+.comment input{
+  width: 97%;
+  border: 1rpx solid #ccc;
+  height: 80rpx;
+  margin: 10rpx;
+}
+.comment .imgs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10rpx;
+  box-shadow: 0 0 5rpx #ccc;
+}
+.comment .imgs image{
+  width: 200rpx;
+  height: 300rpx;
+}

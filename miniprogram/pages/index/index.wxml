@@ -1,0 +1,4 @@
+<import src="./movie-temp/movie-temp.wxml" />
+<view wx:for="{{movieList}}" wx:key="{{index}}">
+  <template is="movie-temp" data="{{...item}}"/>
+</view>

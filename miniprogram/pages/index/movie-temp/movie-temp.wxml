@@ -1,0 +1,12 @@
+<template name="movie-temp">
+    <view class="movie-temp" >
+      <image src="{{images.medium}}" mode="aspectFill" catchtap="gotoDetail" data-id="{{id}}"></image>
+      <view class="movie-temp-info">
+        <text class="title">{{title}} </text>
+        <text>评分：<text class="score">{{rating.average}}分</text> </text>
+        <text>主演：<text wx:for="{{casts}}" wx:key="{{index}}"> {{item.name }} </text>   </text>
+        <text>年份：{{mainland_pubdate}} </text>
+      </view>
+      <button size="mini" catchtap="gotoComment" data-id="{{id}}">评价</button>
+    </view>
+</template>

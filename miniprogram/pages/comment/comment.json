@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+      "i-rate": "vant-weapp/rate",
+      "i-notice-bar": "vant-weapp/notice-bar",
+      "i-button": "vant-weapp/button",
+      "i-card": "vant-weapp/card"
+  },
+  "navigationBarTitleText": "评论"
+}

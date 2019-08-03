@@ -1,0 +1,59 @@
+<import src="./star/star-temp.wxml"/>
+<view class="container">
+  <image class="head-img" src="{{oneMovie.images.large}}" mode="aspectFill" />
+  <view class="head-img-hover" data-src="{{oneMovie.images.large}}" catchtap="viewMoviePostImg">
+    <text class="main-title">{{oneMovie.title}}</text>
+    <text class="sub-title">{{oneMovie.countries[0]}} · {{oneMovie.mainland_pubdate}}</text>
+    <view class="like">
+      <text class="highlight-font">
+        {{oneMovie.comments_count}}
+      </text>
+      <text class="plain-font">
+        人喜欢
+      </text>
+      <text class="highlight-font">
+        {{oneMovie.ratings_count}}
+      </text>
+      <text class="plain-font">
+        条评论
+      </text>
+    </view>
+  </view>
+  <image class="movie-img" src="{{oneMovie.images.small}}" data-src="{{oneMovie.images.large}}" catchtap="viewMoviePostImg"/>
+  <view class="summary">
+    <view class="original-title">
+      <text>{{oneMovie.title}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <template is="star-temp" data="{{star,id:oneMovie.rating.average}}"/>
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演</text>
+      <text>{{oneMovie.writers[0].name}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">影人</text>
+      <text wx:for="{{oneMovie.casts}}" wx:key="{{index}}">{{item.name}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型</text>
+      <text wx:for="{{oneMovie.tags}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="synopsis">
+    <text class="synopsis-font">剧情简介</text>
+    <text class="summary-content">{{oneMovie.summary}}</text>
+  </view>
+  <view class="hr"></view>
+  <view class="cast">
+    <text class="cast-font"> 影人</text>
+    <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">    
+        <view class="cast-container"  wx:for="{{oneMovie.casts}}" wx:key="{{index}}"wx:for-item="item">
+          <image class="cast-img" src="{{item.avatars.small}}"></image>
+          <text class="cast-name">{{item.name}}</text>
+        </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<view class="comment">
+  <view class="comment-coms" wx:for="{{comments}}" wx:key="{{index}}">
+    <i-card title="{{item.content}}" extra="额外内容" thumb="{{item.author.avatar}}">
+        <view slot="footer">{{item.created_at}}</view>
+    </i-card>
+  </view>
+
+   <input value="{{ value1 }}" bindinput="getContent" placeholder="输入一些你的评论吧" />
+  <view class="comment-star">
+    <i-cell title="基本用法">
+        <i-rate 
+            bind:change="onChange1" 
+            value="{{starIndex1}}">
+        </i-rate>
+    </i-cell>
+  </view>
+  <view class="imgs"  >
+    <image src="{{item}}" wx:for="{{images}}" wx:key="{{index}}"></image>
+  </view>
+  <i-button bind:click="upImage"  size="large" type="info" >上传图片</i-button>
+
+  <i-button bind:click="handSubmit"  size="large" type="primary">提交评论</i-button>
+
+</view>

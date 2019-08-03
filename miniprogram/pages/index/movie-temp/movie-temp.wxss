@@ -1,0 +1,38 @@
+.movie-temp{
+  display: flex;
+  box-shadow: 5rpx 5rpx 10rpx #777;
+  height: 300rpx;
+  margin: 15rpx;
+}
+.movie-temp image{
+  width: 180rpx;
+  height: 280rpx;
+  margin: 10rpx;
+}
+.movie-temp .movie-temp-info{
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 10rpx;
+  width: 53%;
+}
+.movie-temp .movie-temp-info text{
+  margin: 10rpx 0;
+  font-size: 30rpx;
+  color: #777;
+}
+.movie-temp .movie-temp-info text:nth-child(2) .score{
+  color: rgb(212, 107, 21)
+}
+.movie-temp .movie-temp-info .title{
+  font-weight: 700;
+  font-size: 35rpx;
+  color: black
+}
+.movie-temp button{
+  height: 50rpx;
+  margin: auto;
+  background-color: red;
+  font-weight: 600;
+  color: white;
+}
+
